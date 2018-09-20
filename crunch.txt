@@ -1,0 +1,9 @@
+1) crunch to generate random combinations of a word::::
+           :::in terminal:::
+                  crunch 1 5 suinl -o /root/Desktop/password.txt
+
+2) to merge words with different combinations:::::
+       :::in terminal:::
+                 crunch 1 1 -p cat rat lion
+
+3)

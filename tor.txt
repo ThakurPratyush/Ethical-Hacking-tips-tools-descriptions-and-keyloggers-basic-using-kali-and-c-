@@ -1,0 +1,9 @@
+1) tor service.......
+  apt-get install tor
+
+
+
+2) use tor browser
+ # the hidden wiki
+
+

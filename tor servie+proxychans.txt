@@ -1,0 +1,26 @@
+1) nano /etc/proxychains.conf
+
+
+
+2) mostly use dynamic chains with free proxies and also uncomment : proxy_DNS
+
+
+3)at last with socks4
+ 
+
+  socks5    same as above  same as above
+
+
+4)now service tor start
+
+   now u will be anonymus using tor service
+
+5)verify using :::::
+  
+   proxychains firefox duckduckgo.com
+
+6)use website ::dnsleaktest :: to show from where traffic is comming
+
+
+
+7) using proxies :::::: nano /etc/proxychains.conf

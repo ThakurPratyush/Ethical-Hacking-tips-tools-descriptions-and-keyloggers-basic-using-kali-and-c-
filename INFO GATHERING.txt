@@ -1,0 +1,8 @@
+1) nslookup -->> to change domain name into IP address
+       :::in terminal:::
+              nslookup IP
+2) we can use MAJOR IP BLOCKS  to find info about various ip's
+   gives physical location of IP ADDRESS 
+        :::in terminal:::
+              curl ipinfo.io/IP
+         

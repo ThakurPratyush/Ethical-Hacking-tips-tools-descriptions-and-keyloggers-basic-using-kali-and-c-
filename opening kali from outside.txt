@@ -1,0 +1,21 @@
+1) when kali loads click on up down keys to stop grub from loading.
+
+2) click -> e <- to edit  
+
+3) in second line starting from :::::::
+     
+      linux/boot/vm/
+
+4) find -> ro <- change to -> rw <- 
+
+5) go to the end of the line::::
+     
+    init=/bin/bash
+
+6) f10 -->> boots up the shell
+
+7) now change password of root::::
+   
+     root@kali# passwd root           //reset to any password you like
+
+ 

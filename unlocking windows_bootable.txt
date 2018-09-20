@@ -1,0 +1,27 @@
+1) use bootable kali FORENSIC MODE
+2) go to home -> other locations -> find computer's c drive here
+3) if i doesn't open ::::: 
+    :::in terminal:::
+                 fdisk -l
+     now suppose that we have to open disk sda 2
+     :::in terminal:::
+                     
+         ntfsfix /dev/sda2
+
+4) go to the drive -->> right click -->> open in terminal
+
+5) in the opened terminal of the disk::::
+      
+        cd Windows/System32/config
+    
+  now in this location::::
+
+        ls -l SAM*
+
+        chntpw -l SAM                         //users shown here
+ 
+        chntpw -u britec SAM                 //   britec is account name:::
+
+  to clear password:::
+        press::: 
+           1 ----->>>> q

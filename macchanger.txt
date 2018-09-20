@@ -1,0 +1,38 @@
+
+@@@@@  ifconfig eth0 IP                  //changes ip of a adpater 
+@@@@@  ifconfig eth0 netmask netmask_here
+
+1) to check ip :::::
+    :::in terminal:::
+
+   ifconfig 
+
+2) to check help::::
+     :::in terminal:::
+   
+   macchanger -h 
+
+3) to print mac address we are using::::
+     :::in terminal:::
+   
+   macchanger -s eth0    //use other interface if needed 
+
+4) use address which is specified::::
+     :::in terminal:::
+ 
+   -m , --mac XX:XX:XX:XX:XX:XX, sets desired mac
+  
+   macchanger --mac=XX:XX:XX:XX:XX
+
+5) to use fully random mac::::
+     :::in terminal:::
+  
+   macchanger -r eth0
+
+6) to reset original mac::::
+     :::in terminal:::
+ 
+  macchanger -p eth0
+   
+        
+   

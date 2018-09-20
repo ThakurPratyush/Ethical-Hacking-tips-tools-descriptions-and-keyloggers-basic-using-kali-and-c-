@@ -1,0 +1,46 @@
+1) packages to be installed::::::::
+   :::in terminal:::
+           a) apt-get install dnsmasq
+           b) apt-get install hostapd
+
+2)making dnsmasq file:::
+      :::in terminal:::
+              leafpad /etc/dnsmasq.conf                //delete if something in here
+
+3)making hosts file
+      :::in terminal:::
+      leafpad Desktop/fakehosts.conf
+
+4)the page for localhost saved here:::::::::
+       root/var/www/html
+
+5) starting acess point::::::
+        airbase-ng -e 'hotdogs' -c 6 wlan0mon          //monitor mode is required 
+
+6) :::in terminal:::
+            dnsmasq -C /etc/dnsmasq.conf -H Desktop/fakehosts.conf -d
+
+7)to start internet::::
+          :::in terminal:::
+                ifconfig at0 10.0.0.1/24 up                      //checked by using ifconfig
+
+8)now distributing IP'S
+           :::in terminal:::
+              
+                  route add -net 10.0.0.0 netmask 255.255.55.0 gw 10.0.0.1
+
+9) :::in terminal:::
+                 
+               echo 1 > /proc/sys/net/ipv4/ip_forward
+
+10) :::in terminal:::
+           
+                  iptables -P FORWARD ACCEPT
+
+11) :::in terminal:::
+                   
+                  iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+
+12) if we r using pages from local machine::::
+             :::in terminal:::
+                   apache2ctl start

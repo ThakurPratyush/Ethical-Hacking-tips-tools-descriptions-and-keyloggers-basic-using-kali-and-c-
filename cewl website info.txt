@@ -1,0 +1,20 @@
+1) to get basic info ::::
+      :::in terminal:::
+                man cewl               //gives info about cewl
+
+2) to fetch all the words present in a website::::
+    :::in terminal:::
+                cewl www.website_name.com         //all words will be shown here
+
+3) similar words from a website::::
+     :::in terminal::: 
+                 cewl -c www.website_name.com
+ 
+4) to fetch emails present in a website::::
+     :::in terminal:::
+                 cewl -e --email-file /root/Desktop/mail.txt www.website_name.com
+
+                            // space added using \           // or "abc "
+
+
+            

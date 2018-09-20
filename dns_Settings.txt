@@ -1,0 +1,16 @@
+1) to show DNS server we are using::::::
+   
+   cat /etc/resolv.conf
+
+2) to change DNS settings::::::
+
+   nano /etc/dhcp/dhclient.conf
+   :::::::::::::::::;:::::::::::;
+  ####now find line :::::::::    prepend domain-name-server IP1, IP2;
+
+3) now find dns ip's by seraching opendns IP'S  in the place of this ip's @@@@@@ we can put three ip's including 3rd failsafe 8.8.8.8
+
+
+4) service network-manager restart
+  
+    

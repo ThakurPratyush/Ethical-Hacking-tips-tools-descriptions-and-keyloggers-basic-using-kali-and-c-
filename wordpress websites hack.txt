@@ -1,0 +1,15 @@
+1) to find username of wordpress site::::
+   
+        :::in terminal:::
+                   wpscan --url URl_here --enumerate u
+
+2) to open wordpress login page::::
+        in browser:::
+                  URL/wp-login.php
+
+3) for password crack using deafault dictionary::::
+
+        :::in terminal:::
+                  wpscan --url url-here/wp-login.php --wordlist/usr/share/wordlists/rockyou.txt.gz --username username_here
+  
+      

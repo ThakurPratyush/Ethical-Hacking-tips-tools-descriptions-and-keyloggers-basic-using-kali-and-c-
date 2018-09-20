@@ -1,0 +1,48 @@
+1) used for making 2 way connections::::::::
+     ::::in terminal::::
+               ncat --help        //gives options
+2) to start listening:::
+         ::::in terminal::::
+                  ncat -v -l -p 8888 -e /bin/bash &
+
+3)to check :::
+      the port will be open if service is strated
+            ::::in terminal::::
+                     nmap localhost
+
+4)in other machine::::
+      ::::in terminal::::
+           ncat listning_machine_IP  8888       //use sam eport as before
+
+5) to show that which process is uding a specified port::::
+    ::::in terminal::::
+           lsof -i : 8888
+
+6) to stop the process:::::
+      ::::in terminal:::: 
+              kill process_ID
+
+7)to chat with other user::::
+      ::::in terminal::::
+              a) ncat --chat -p 8888
+              b) ncat -l -p 8888
+
+8) in the second machine::::
+       ::::in terminal::::
+               ncat ip_of_first_machine 8888
+
+
+9) for ssl encrypted chat::::::::::
+        ::::in terminal::::
+                ncat --ssl -l -p 8888                //other steps same 
+
+10) to check diff b/w encryption and non-encryption:::
+         in wireshark::::
+
+                search for :::: ip.addr             //in filter
+
+11)to include more than one person in chat :::::::::::
+          :::in terminal:::
+                 
+                ncat --ssl -l -K -p 8888
+

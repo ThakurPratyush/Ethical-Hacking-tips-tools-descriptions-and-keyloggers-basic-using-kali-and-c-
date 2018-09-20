@@ -1,0 +1,10 @@
+1) to list cores ::::::::::;
+        :::in terminal:::
+             a) pyrit list_cores
+             b) pyrit eval                 //checks if passwords and essid is added to database
+             c) pyrit -i address_of_list import-passwords
+             d) pyrit -e name_of_wifi create_essid
+             e) pyrit batch 
+             f) pyriit -r capture.cap  attack_db        //starts attack
+             g) pyrit -e name_of_wifi deleteessid              //removes essid from database
+             h) rm-rf -pyrit/blockspace/password/

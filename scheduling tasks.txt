@@ -1,0 +1,41 @@
+1) in terminal:::::::
+   
+  a) crontab -e    //choose editor nano 
+  b) go to the end of the file :::::::::
+   
+      @ reboot macchanger -r eth0
+ 
+2) go to documents and make a file here 
+    :::in terminal:::
+     a) cd Documents
+      
+      b) nano whatever.sh   //any name can be used
+    
+      c) script to be written in whatever.sh to give random mac:::
+         
+          # !/bin/bash
+          
+           ifconfig eth0 down
+           sleep 2                       //just slows execution
+           macchanger -r eth0
+           sleep 2
+           ifconfig eth0 up
+      
+       d) make this file executable in documents directory::::
+           
+         chmod +x whatever.sh
+
+        e) open crontab file
+           :::in terminal:::
+       
+         crontab -e
+ 
+          # move to bottom of file:::
+            
+         reboot /root/Documents/whatever.sh             // this is path
+
+ 
+    
+       
+           
+          

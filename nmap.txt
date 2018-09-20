@@ -1,0 +1,69 @@
+1) to install nmap:::
+    :::in terminal:::
+          apt-get install nmap
+
+2)  scan top 1000 ports:::
+     :::in terminal:::
+           nmap IP
+
+3) for more then  1 ip:::
+     :::in terminal:::
+          nmap IP1 IP2 IP3
+
+4) to scan entire network:::
+    :::in terminal:::
+         nmap 192.168.0.*
+         'or'
+         nmap 192.168.0.0-255
+
+5) to scan from a text file::::
+      <-----_____------>  make a text file and write the IP to be scanned in each line name it as targets.txt
+      :::in terminal:::
+             nmap -iL targets.txt
+
+6) AGGRESSIVE SCAN ---->>> gives OS, traceroute, version of services running
+         :::in terminal::: 
+               nmap -A IP
+
+7) finding traceroute:: returns all possible ways to go to the ip
+          :::in terminal:::
+                  nmap --traceroute IP
+8) detecting os ::::
+           :::in terminal:::
+                  nmap -O IP
+
+9) detecting service versions:::
+             :::in terminal:::
+                  nmap -sV IP
+
+10) fast scan ::::::: only 100 ports
+             nmap -F IP
+
+11) TO scan particular ports when port numbers are given::::::::::::
+             nmap -p 20-25,80,443 IP
+
+12) TO SCAN ports when port services are known::::::::::
+             nmap -p http,mysql IP
+
+13) TO SCAN only open ports ::::::::::::::::;
+             nmap --open IP
+
+14) TO SCAN EVEry single port :::::::::::::::
+             nmap -p- IP
+
+15)TO WRITE THE output in a text file:::::::::::::::
+             nmap -F -ON Desktop/results.txt IP
+             nmap -oG- 192.168.1.0-255 -p 22 -vv > /home/scan.txt
+
+16) to know PHP VERSION :::::::
+         :::in the terminal:::
+              
+             nmap -sV --script=http-php-version <target_IP>                       //PHP VERSIOn on local machine :::in terminal::: php5 -v
+
+
+
+
+
+
+             
+              

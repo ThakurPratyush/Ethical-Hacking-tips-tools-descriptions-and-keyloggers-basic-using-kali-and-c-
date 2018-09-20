@@ -1,0 +1,16 @@
+IN_TERMINAL
+
+                                          
+1) ifconfig wlan0 up                //brings card up               //wlan0 is interface
+
+2) airmon-ng                        //detects adapter
+
+3) airmon-ng check kill              //stops processes effecting
+
+4) airmon-ng start wlan0             //starts interface
+
+5) //name becomes wlan0mon
+
+6) airodump-ng wlan0mon              //different essid and devices connected mac-addresses are shown
+
+7) airodump-ng --bssid mac_address_here wlan0mon    //for a particular mac address 
